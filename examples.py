@@ -80,3 +80,13 @@ write_png("example12.png", 5000, 50, gradient(LINEAR_X, GAUSSIAN(0.005), [
 write_png("example13.png", 100, 500, gradient(LINEAR_Y, GAUSSIAN(0.01), [
     (0.3, HSV(0.6, 0.75, 0.1), HSV(0.6, 0.75, 0.2)),
 ]))
+
+# transparency gradient
+write_png("example14.png", 20, 80, gradient(LINEAR_Y, GAUSSIAN(0.01), [
+            (1.0, (0x00, 0x00, 0x00, 0xFF), (0x55, 0x55, 0x55, 0x00)),
+]))
+
+write_png("example15.png", 800, 800, gradient(RADIAL(0.5, 0.5), GAUSSIAN(0.01), [
+            (0.501, (0xFF, 0xFF, 0xFF, 0xFF), (0x00, 0x00, 0x00, 0x00)),
+]))
+
